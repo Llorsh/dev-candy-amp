@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <title>Hello, AMPs</title>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -95,6 +96,63 @@
             --tertiary-color: #ee1a51;
             --cyan-color: #22d1e1;
 
+        }
+        .box {
+        display: flex;
+        margin: 25px 0px 0px 0px;
+        padding: 0px 10px 0px 10px;
+      }
+
+      .logo {
+        flex: 1 1 auto;
+        text-align: left;
+        
+      }
+
+      .sitename {
+        flex: 1 1 auto;
+        text-align: center;
+        margin: auto;
+        color: black;
+        font-family: arial;
+      }
+
+      .menu {
+        flex: 1 1 auto;
+        text-align: right;
+      }
+      #sidebar1{
+        margin-top: 130px;
+        text-align: left;
+      }
+      div.hamburger {
+        padding: 10px 10px;
+        color: purple;
+        }  
+
+        ul.sidebar{
+        text-align: left;
+        padding-right: 150px;
+        padding-left: 0;
+        }
+
+        .sidebar > li {
+        text-align: left;
+        list-style: none;
+        margin-bottom:10px;
+        font-family: arial;
+        }
+
+        .sidebar a {
+        text-decoration: none;
+        padding: 10px;
+        }
+        .close-sidebar {
+        font-size: 1.0em;
+        padding-left: 5px;
+        }
+        .home-button {
+        margin-top: 8px;
         }
 
         body {
@@ -200,8 +258,6 @@
 
         .single--info {
             width: calc(100% / 2);
-            padding-left: 1rem;
-            padding-right: 1rem;
         }
 
         .single--header--author {
@@ -261,14 +317,50 @@
 
         .single--content-excerpt {
             font-size: 0.9375rem !important;
+            font-family: arial;
+            text-align: justify;
         }
-
-        .tambien-leer {
+        
+        .visto-dia{
+            font-family: arial;
             margin-top: 50px;
             padding-left: 1rem;
             padding-right: 1rem;
         }
 
+        .ver-tambien{
+            font-family: arial;
+            margin-top: 50px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .tambien-leer {
+            font-family: arial;
+            margin-top: 50px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .header--secction--ver--tambien{
+            display: flex;
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
+            font-weight: 700;
+            letter-spacing: .1rem;
+            line-height: 0.7; 
+        }
+
+        .header--secction--ver--tambien:before{
+            background-color: var(--tertiary-color);
+            content: "";
+            margin-right: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        
+        
         .header--section--tambien--leer {
             display: flex;
             padding-top: 1.875rem;
@@ -278,6 +370,7 @@
             line-height: 0.7;
 
         }
+        
 
         .header--section--tambien--leer:before {
             background-color: var(--tertiary-color);
@@ -286,7 +379,39 @@
             width: 1rem;
             height: 1rem;
         }
+        .header--section--visto-dia{
+            display: flex;
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
+            font-weight: 700;
+            letter-spacing: .1rem;
+            line-height: 0.7; 
+        }
+        .header--section--visto-dia::before{
+            background-color: var(--tertiary-color);
+            content: "";
+            margin-right: 0.5rem;
+            width: 1rem;
+            height: 1rem;  
+        }
+        .headerbar {
+            text-align: right;
+            background: white;
+            height: 50px;
+            z-index: 999;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
 
+        }
+        .banner-superior{
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin: 50px 0px 25px 0px;
+            padding: 10px 20px 10px 20px;
+}
         .sidebar--principal {
             margin-top: 50px;
             width: 70%;
@@ -299,6 +424,14 @@
         }
 
         .card--cyan {
+            background-color:cyan;
+            color: white;
+        }
+        .card-green{
+            background-color: var(--lime-color);
+            color: white;
+        }
+        .card-pink{
             background-color: var(--cyan-color);
             color: white;
         }
@@ -343,6 +476,10 @@
             height: 100% !important;
 
         }
+        p{
+            font-family: arial;
+            text-align: justify;
+        }
 
         .card--title {
             font-size: 0.75rem;
@@ -352,39 +489,78 @@
         .card--date {
             font-size: 0.75rem;
         }
+        
+        div.single--header{
+            color: black;
+            font-family: arial;
+            background: white;
+            margin: 35px 0px 25px 0px;
+            padding: 0px 20px 10px 20px;
+        }
+        .encabezado{
+            background-color: purple;
+            font-weight: 1000;
+            font-family: arial;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+            border: 1px solid purple;
+            margin: 50px 0px 25px 0px;
+            padding: 5px 8px 5px 8px;
+        }
+        .articulo{
+            text-align: justify;
+        }
+  
+        
     </style>
 </head>
 
 <body>
-    <header class="header--site">
-        <div class="banner--header">
-            <div class="banner--publicidad banner-superior">
-                <amp-img src="http://placehold.it/300x50/" alt="" width="300" height="50" class="img--publicidad">
-                </amp-img>
-            </div>
-        </div>
-        <div class="content--header">
-            <div class="item--content-header item--left">
-                Lorem ipsum
-            </div>
-            <div class="item--content-header item--center">
-                Lorem, ipsum
-            </div>
-            <div class="item--content-header item--right">
-                <a class="btn btn--sidebar" on="tap:sidebar1.open">☰</a>
-            </div>
-        </div>
-    </header>
+    <header class="headerbar">
+        <div class="banner-superior">
+          <img src="http://placehold.it/300x50/d5228b/ffffff/" title="{banner}">
+      </div>
+      </header> 
+      
     <main class="main--site">
+
+        <div class="banner-menu">
+            <div class="box">
+                <div class="logo">
+                  <a href="#">
+                  <amp-img class="home-button" src="../app/assets/images/logo.jpg" width="40" height="40"></amp-img>
+                </a></div>
+                <div class="sitename">
+                  <a href="#">
+                    <amp-img class="site-button" src="../app/assets/images/site.jpg" width="80" height="40"></amp-img>
+                  </a>
+                </div>
+                <div class="menu">
+                  <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+                </div>
+              </div>
+        
+              <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+                  <ul class="sidebar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nacional</a></li>
+                    <li><a href="#">Internacional</a></li>
+                    <li><a href="#">Musica</a></li>
+                    <li><a href="#">Cine y Series</a></li>
+                    <li><a href="#">Tecnologia y Tendencias</a></li>
+                    <li><a href="#">Trending</a></li>
+                  </ul>
+              </amp-sidebar>
+        </div>
+
         <section class="single--site">
-            <div class="sigle--header">
-                <div class="single--header-category">
-                    <span class="text--category">Trending</span>
-                </div>
-                <div class="single--header--title">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad explicabo fugit aperiam commodi nobis
-                    at, aliquid, voluptate
-                </div>
+            <div class="single--header">
+                <a href="#" class="encabezado">MÚSICA</a>
+            <div class="articulo">
+                <h3>Los premios Pulsar 2019 se rinden al género urbano y al predominio femenino.</h3>
+            </div>
                 <div class="single--header--info">
                     <div class="item--left single--info single--header--author">Por / Admin</div>
                     <div class="item--right single--info single--header--date">12.05.2020</div>
@@ -417,54 +593,69 @@
             </div>
             <div class="single--content">
                 <div class="single--content-excerpt">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, quaerat commodi? Excepturi ipsum,
-                    quas ea est quos impedit ut voluptatem odit! Provident, saepe recusandae natus a harum iure numquam
-                    iusto.
+                    La ceremonia de hoy tendrá un inédito bloque dedicado al trap, rostros de La Red y a las mujeres 
+                    como favoritas. Entre ellas, Paloma Mami y Mon Laferte, quienes no irán al evento..
                 </div>
                 <div class="single--content--content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque laudantium pariatur quibusdam
-                    magnam itaque quas, alias qui labore dolor modi amet commodi blanditiis, molestias in
-                    necessitatibus, aut maxime ut reprehenderit.
-
+                    <amp-img alt="Rx 78 2" src="../app/assets/images/gundam.jpg" width="320" height="180" layout="responsive"> 
+                    </amp-img>
                 </div>
+    
+                <p>Reconocida e instalada en el medio como la principal premiación anual a la música chilena, 
+                    los Pulsar llegan hoy a su quinta edición abrazando tendencias globales y desafíos inmediatos. 
+                    Entre ellos, aquellos que definen el presente de la música popular, dominada por artistas mujeres, 
+                    el pop urbano y el streaming.</p>
+      
+                  <p>El caso más evidente es el del trap: ausente en las cuatro versiones previas de los premios que 
+                    organiza la Sociedad Chilena de Autores e Intérpretes Musicales (SCD), los artistas adscritos a 
+                    esa movida tendrán un lugar destacado en el evento de esta noche en el Teatro Teletón, que será 
+                    transmitido desde las 20.30 horas en la web de La Red -las primeras ocho categorías- y a partir 
+                    de las 22.00 por su señal abierta, con el debut en la conducción de Eduardo Fuentes.</p>  
+                    
+                    <p>segmento dedicado a la música urbana que partirá cerca de las 23.30 con un video introductorio
+                     de sus exponentes locales, para luego dar paso a los shows de Princesa Alba (nominada a Artista 
+                     revelación), Gianluca y Ceaese (ambos compitiendo en Mejor artista música urbana), Tomasa del Real, 
+                     Pablo Chill-E, Polimá Westcoast y Young Cister. Actuarán por separado y al final todos juntos.</p>
             </div>
         </section>
+        <section class="ver-tambien">
+            <header class="header--section header--secction--ver--tambien">
+                Ver tambien
+            </header>
+            <div class="card-leer card--flex">
+                <a class="card-leer--overlay" href="#">
+                </a>
+                <div class="card--image">
+                    <amp-img src="http://placehold.it/300x50/" alt="" width="140" height="114" class="img--card">
+                    </amp-img>
+                </div>
+                <div class="card--content">
+                    <div class="card--content-item card--date">
+                        12.05.2020
+                    </div>
+                    <div class="card--content-item card--title">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quam necessi
+                    </div>
+                </div>
+            </div>
+            <p>A ellos se suma Paloma Mami, la gran revelación del pop local, quien pese a no cumplir con las bases 
+                para postular como Artista revelación -que exigen haber publicado disco de al menos cuatro temas- 
+                está en carrera en uno de los apartados más importantes: Canción del año, por su éxito “Not steady”. 
+                Un reconocimiento a la artista chilena más escuchada en el streaming este 2019 (con cerca de 400 
+                millones de reproducciones digitales a la fecha, sumando todas las plataformas), quien por estar 
+                fuera de Chile no podrá asistir a la ceremonia. Ante la posibilidad cierta de que se quede con su 
+                primer Pulsar, está contemplado que envíe un video de agradecimiento.</p>
+
+                <p>Lo mismo Mon Laferte, por estos días en Europa con la gira de Norma. Es con ese LP que la cantautora 
+                postula al premio mayor: Álbum del año, galardón que aún no tiene en su vitrina (en 2018 se quedó con
+                 Canción del año, Mejor artista pop y Canción más escuchada) y para el que este año parece llegar 
+                 mejor posicionada. Sus competidores en ese ítem son Gepe, Álex Anwandter, La Brígida Orquesta y Cami.</p>
+                
+                <p>Ésta última y Francisca Valenzuela también serán parte del show. En una nueva muestra de que el pop 
+                actual es dominado por propuestas femeninas, su presencia no será en un bloque dedicado “a las mujeres
+                en la música”, como en años anteriores, sino que con un espacio estelar sobre el escenario.</p>
+        </section>
+
         <section class="tambien-leer">
             <header class="header--section header--section--tambien--leer">
                 También leer
@@ -485,7 +676,7 @@
                     <a class="card-leer--overlay" href="#">
                     </a>
                     <div class="card--image">
-                        <amp-img src="http://placehold.it/300x50/" alt="" width="150" height="150" class="img--card">
+                        <amp-img src="http://placehold.it/300x50/" alt="" width="140" height="114" class="img--card">
                         </amp-img>
                     </div>
                     <div class="card--content">
@@ -499,17 +690,81 @@
                 </div>
             </div>
         </section>
+        
+        <section class="visto-dia">
+            <header class="header--section header--section--visto-dia">
+                Lo más visto del día
+            </header>
+        </section>
+
+        <div class="card-leer card--cyan">
+            <a class="card-leer--overlay" href="#">
+            </a>
+            <div class="card-leer card--flex">
+                <a class="card-leer--overlay" href="#">
+                </a>
+                <div class="card--image">
+                    <amp-img src="http://placehold.it/300x50/" alt="" width="140" height="114" class="img--card">
+                    </amp-img>
+                </div>
+                <div class="card--content">
+                    <div class="card--content-item card--date">
+                        12.05.2020
+                    </div>
+                    <div class="card--content-item card--title">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quam necessi
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-leer card--cyan">
+            <a class="card-leer--overlay" href="#">
+            </a>
+            <div class="card-leer card--flex">
+                <a class="card-leer--overlay" href="#">
+                </a>
+                <div class="card--image">
+                    <amp-img src="http://placehold.it/300x50/" alt="" width="140" height="114" class="img--card">
+                    </amp-img>
+                </div>
+                <div class="card--content">
+                    <div class="card--content-item card--date">
+                        12.05.2020
+                    </div>
+                    <div class="card--content-item card--title">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quam necessi
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-leer card--cyan">
+            <a class="card-leer--overlay" href="#">
+            </a>
+            <div class="card-leer card--flex">
+                <a class="card-leer--overlay" href="#">
+                </a>
+                <div class="card--image">
+                    <amp-img src="http://placehold.it/300x50/" alt="" width="140" height="114" class="img--card">
+                    </amp-img>
+                </div>
+                <div class="card--content">
+                    <div class="card--content-item card--date">
+                        12.05.2020
+                    </div>
+                    <div class="card--content-item card--title">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quam necessi
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+         
+        </footer>
+        
+        
     </main>
-    <amp-sidebar class="sidebar--principal" id="sidebar1" layout="nodisplay" side="right">
-        <ul>
-            <li>Nav item 1</li>
-            <li><a href="#idTwo" on="tap:idTwo.scrollTo">Nav item 2</a></li>
-            <li>Nav item 3</li>
-            <li><a href="#idFour" on="tap:idFour.scrollTo">Nav item 4</a></li>
-            <li>Nav item 5</li>
-            <li>Nav item 6</li>
-        </ul>
-    </amp-sidebar>
+    
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 </body>
 
