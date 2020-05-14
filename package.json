@@ -17,6 +17,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.2",
+    "parent-folder": "^1.1.0",
     "readable-stream": "^3.6.0"
   },
   "dependencies": {}

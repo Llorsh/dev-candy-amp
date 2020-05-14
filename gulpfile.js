@@ -7,7 +7,12 @@ const imagemin = require('gulp-imagemin');
 const autoprefixer = require('gulp-autoprefixer');
 const htmlmin = require('gulp-htmlmin');
 const browserSync = require('browser-sync').create();
+const parentFolder = require('parent-folder');
 
+
+const project = parentFolder()
+const target = `localhost/${project}/app/`
+const port = Math.floor(1000 + Math.random() * 5000)
 
 function minhtml() {
     return gulp.src('./dev/*.html')
@@ -49,9 +54,11 @@ function compressjs() {
 
 function watch() {
     browserSync.init({
-        server: {
-            baseDir: './dev'
-        }
+        proxy: {
+            target: target,
+            ws: true
+        },
+        port: port,
     })
     gulp.watch('./dev/scss/**/*.scss', style)
     gulp.watch('./dev/js/**/*.js', compressjs)
