@@ -12,7 +12,7 @@ const parentFolder = require('parent-folder');
 
 const project = parentFolder()
 const target = `localhost/${project}/app/`
-const port = Math.floor(1000 + Math.random() * 5000)
+// const port = Math.floor(1000 + Math.random() * 5000)
 
 function minhtml() {
     return gulp.src('./dev/*.html')
@@ -58,7 +58,7 @@ function watch() {
             target: target,
             ws: true
         },
-        port: port,
+        // port: port,
     })
     gulp.watch('./dev/scss/**/*.scss', style)
     gulp.watch('./dev/js/**/*.js', compressjs)

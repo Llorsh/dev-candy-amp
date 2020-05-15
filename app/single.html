@@ -98,15 +98,21 @@
 
         }
 
-        .box {
-            display: flex;
-            margin: 25px 0px 0px 0px;
-            padding: 0px 10px 0px 10px;
-            align-items: center;
+        body {
+
+            font-family: arial;
         }
 
-        .logo {
-            flex: 1 1 auto;
+        .box {
+            display: flex;
+            padding-top: 1.2rem;
+            align-items: center;
+            padding-bottom: .3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .radio--button {
             text-align: left;
 
         }
@@ -125,20 +131,27 @@
         }
 
 
+        amp-sidebar {
+            background-color: white;
+        }
 
         .navbar--primary {
             text-align: left;
-
+            margin-left: -40px;
+            margin-right: 0px;
+            /* padding: 43px; */
+            /* padding-left: 80px; */
+            width: 265px;
         }
 
-        .navbar--primary >li {
+        .navbar--primary>li {
             text-align: left;
             list-style: none;
             margin-bottom: 10px;
             font-family: arial;
         }
 
-        .navbar--primary  a {
+        .navbar--primary a {
             text-decoration: none;
             padding: 10px;
         }
@@ -148,9 +161,6 @@
             padding-left: 5px;
         }
 
-        .home-button {
-            margin-top: 8px;
-        }
 
         body {
             max-width: 100%;
@@ -180,6 +190,16 @@
             padding-left: 1rem;
             padding-right: 1rem;
             box-shadow: 0 0 1.5625rem 0.1875rem rgba(70, 18, 119, 0.2)
+        }
+
+        .banner-menu {
+            position: fixed;
+            width: 100%;
+            z-index: 2147483650;
+            background-color: white;
+            -webkit-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.22);
+            -moz-box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.22);
+            box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.22);
         }
 
         .item--content-header {
@@ -396,24 +416,21 @@
             height: 1rem;
         }
 
-        .headerbar {
-            text-align: right;
+        .header--site {
+            text-align: center;
             background: white;
-            height: 50px;
             z-index: 999;
             top: 0;
             width: 100%;
-            display: flex;
             align-items: center;
+            margin-top: -30px;
 
         }
 
         .banner-superior {
+            margin-top: 7rem;
             text-align: center;
-            position: relative;
             width: 100%;
-            margin: 50px 0px 25px 0px;
-            padding: 10px 20px 10px 20px;
         }
 
         .sidebar--principal {
@@ -533,11 +550,95 @@
             color: var(--primary-color) !important;
             font-size: 1.25rem;
         }
+
+        .a--flex {
+            display: flex;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .text--radio {
+            width: calc(100% / 2);
+            line-height: .9rem;
+            font-weight: 700;
+        }
+
+        .item--header {
+            max-width: calc(100% / 3 - 2rem);
+            width: 100%;
+            align-items: center;
+            align-content: center;
+        }
+
+        .sidebar--primary {
+            margin-top: 61.2px;
+        }
+
+        .navbar--item a {
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            align-content: center;
+        }
+
+        .navbar--item a .fa {
+            color: var(--secondary-color) !important;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-right: 0.875rem;
+            width: 10%;
+        }
+
+        .navbar--item a span {
+            margin-left: .2rem;
+        }
+
+        .item--special {
+            height: 4.8125rem;
+            background-image: url('../app/assets/images/bg-mobile-menu.jpg');
+            width: 100%;
+        }
+
+        .item--special a {
+            height: 100%;
+            max-height: calc(100% - 20px);
+
+        }
+
+        .item--special a span {
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <header class="headerbar">
+    <header class="header--site">
+
+
+        <div class="banner-menu">
+            <div class="box">
+                <div class="item--header radio--button">
+                    <a href="#" class="a--flex">
+                        <amp-img class="home-button" src="../app/assets/images/alt-live.png" width="30" height="30">
+                        </amp-img>
+                        <div class="text--radio">
+                            Radio Online
+                        </div>
+                    </a>
+                </div>
+                <div class="item--header sitename">
+                    <a href="#">
+                        <amp-img class="site-button" src="../app/assets/images/candy.png" width="48" height="48">
+                        </amp-img>
+                    </a>
+                </div>
+                <div class="item--header menu">
+                    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="btn btn--sidebar">
+                        <i class="fa fa-bars" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
         <div class="banner-superior">
             <img src="http://placehold.it/300x50/d5228b/ffffff/" title="{banner}">
         </div>
@@ -545,25 +646,6 @@
 
     <main class="main--site">
 
-        <div class="banner-menu">
-            <div class="box">
-                <div class="logo">
-                    <a href="#">
-                        <amp-img class="home-button" src="../app/assets/images/logo.jpg" width="40" height="40">
-                        </amp-img>
-                    </a></div>
-                <div class="sitename">
-                    <a href="#">
-                        <amp-img class="site-button" src="../app/assets/images/candy.png" width="48" height="48">
-                        </amp-img>
-                    </a>
-                </div>
-                <div class="menu">
-                    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="btn btn--sidebar">
-                        <i class="fa fa-bars" aria-hidden="true"></i></div>
-                </div>
-            </div>
-        </div>
 
         <section class="single--site">
             <div class="single--header">
@@ -606,7 +688,7 @@
                     como favoritas. Entre ellas, Paloma Mami y Mon Laferte, quienes no irán al evento..
                 </div>
                 <div class="single--content--content">
-                    <amp-img alt="Rx 78 2" src="../app/assets/images/gundam.jpg" width="320" height="180" layout="responsive">
+                    <amp-img alt="Rx 78 2" src="http://placehold.it/320x180/d5228b/ffffff/" width="320" height="180" layout="responsive">
                     </amp-img>
                 </div>
 
@@ -635,7 +717,7 @@
                 <a class="card-leer--overlay" href="#">
                 </a>
                 <div class="card--image">
-                    <amp-img src="http://placehold.it/300x50/" alt="" width="140" height="114" class="img--card">
+                    <amp-img src="http://placehold.it/50x50/" alt="" width="140" height="114" class="img--card">
                     </amp-img>
                 </div>
                 <div class="card--content">
@@ -778,15 +860,39 @@
     </main>
 
 
-    <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+    <amp-sidebar class="sidebar--primary" id="sidebar1" layout="nodisplay" side="right">
         <ul class="navbar--primary">
-            <li class="navbar--item"><a href="#">Home</a></li>
-            <li class="navbar--item"><a href="#">Nacional</a></li>
-            <li class="navbar--item"><a href="#">Internacional</a></li>
-            <li class="navbar--item"><a href="#">Musica</a></li>
-            <li class="navbar--item"><a href="#">Cine y Series</a></li>
-            <li class="navbar--item"><a href="#">Tecnologia y Tendencias</a></li>
-            <li class="navbar--item"><a href="#">Trending</a></li>
+            <li class="navbar--item">
+                <a href="#">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>Home</span></a></li>
+            <li class="navbar--item"><a href="#">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>Nacional</span></a></li>
+            <li class="navbar--item"><a href="#">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <span>Internacional</span></a></li>
+            <li class="navbar--item"><a href="#">
+                    <i class="fa fa-music" aria-hidden="true"></i>
+                    <span>Musica</span></a></li>
+            <li class="navbar--item"><a href="#">
+                    <i class="fa fa-film" aria-hidden="true"></i>
+                    <span>Cine y Series</span></a></li>
+            <li class="navbar--item"><a href="#">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    <span>Tecnologia y Tendencias</span></a></li>
+            <li class="navbar--item"><a href="#">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                    <span>Trending</span></a></li>
+            <li class="navbar--item item--special">
+                <a href="#">
+                    <div class="fa">
+                        <amp-img class="home-button" src="../app/assets/images/alt-live.png" width="30" height="30">
+                        </amp-img>
+                    </div>
+                    <span>Escucha la señal de Radio Candy</span>
+                </a>
+            </li>
         </ul>
     </amp-sidebar>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
