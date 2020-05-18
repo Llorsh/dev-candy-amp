@@ -96,6 +96,8 @@
             --light-gray: #cecece;
             --tertiary-color: #ee1a51;
             --cyan-color: #22d1e1;
+            --lighten-gray: #ebebeb;
+            --gray: #706e73;
 
         }
 
@@ -610,6 +612,151 @@
         .item--special a span {
             color: white;
         }
+
+        .the-single__text>* {
+            margin-bottom: 0.9375rem;
+            margin-top: 0.9375rem;
+        }
+
+        .the-title {
+            font-size: 18px;
+            font-size: 1.125rem;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -o-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            background-position: left center;
+            background-repeat: no-repeat;
+            -webkit-background-size: auto 2.5rem;
+            -moz-background-size: auto 2.5rem;
+            background-size: auto 2.5rem;
+            color: var(--gray);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: box;
+            display: flex;
+            font-weight: 700;
+            -webkit-box-pack: start;
+            -moz-box-pack: start;
+            -o-box-pack: start;
+            -ms-flex-pack: start;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 0;
+            margin-top: 0;
+            min-height: 2.5rem;
+            padding-left: 3.75rem;
+            position: relative;
+        }
+
+        html:not(.is-mobile) [class*="u-space-bottom"] {
+            margin-bottom: 1.25rem;
+        }
+
+        .lateral-card {
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -o-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            border: 1px solid var(--lighten-gray);
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: box;
+            display: flex;
+            -webkit-box-lines: multiple;
+            -moz-box-lines: multiple;
+            -o-box-lines: multiple;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-pack: start;
+            -moz-box-pack: start;
+            -o-box-pack: start;
+            -ms-flex-pack: start;
+            -webkit-justify-content: flex-start;
+            justify-content: flex-start;
+            padding: 0.25rem;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .lateral-card__left,
+        .lateral-card__right {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .lateral-card__media {
+            background-color: var(--primary-color);
+            display: block;
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            width: 100%;
+            height: 0;
+        }
+
+        .lateral-card__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: 0.3s ease-out;
+            -moz-transition: 0.3s ease-out;
+            -o-transition: 0.3s ease-out;
+            -ms-transition: 0.3s ease-out;
+            transition: 0.3s ease-out;
+            will-change: opaciy, transform;
+        }
+
+        .lateral-card__right {
+            padding-bottom: 0.625rem;
+            padding-left: 0.3125rem;
+            padding-right: 0.3125rem;
+            padding-top: 0.625rem;
+        }
+
+        .lateral-card__date {
+            margin-bottom: 0.625rem;
+        }
+
+        .lateral-card__title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-bottom: 1.25rem;
+            position: relative;
+        }
+
+        .lateral-card__title a {
+            color: var(--primary-color);
+            text-align: justify;
+            text-decoration: none;
+
+        }
+
+        .lateral-card__date {
+            font-size: 12px;
+            font-size: 0.75rem;
+            color: var(--gray);
+            display: block;
+            margin-bottom: 0.625rem;
+        }
+
+        .the-title--cyan-square {
+            background-image: url('../app/assets/images/cyan-square.png');
+        }
     </style>
 </head>
 
@@ -699,7 +846,43 @@
                     los Pulsar llegan hoy a su quinta edición abrazando tendencias globales y desafíos inmediatos.
                     Entre ellos, aquellos que definen el presente de la música popular, dominada por artistas mujeres,
                     el pop urbano y el streaming.</p>
+                <section class="the-single__box the-single-box">
+                    <header class="the-single-box__header u-space-bottom-40">
+                        <h4 class="the-single-box__title the-title the-title--cyan-square">Ver también</h4>
+                    </header>
 
+                    <div class="the-single-box__body">
+                        <!-- .lateral-card -->
+                        <figure class="lateral-card">
+                            <div class="lateral-card__left">
+                                <a href="http://www.candy.cl/?p=240" class="lateral-card__media">
+                                    <amp-img
+                                        src="https://www.candy.cl/wp-content/uploads/2020/01/Justin-Bieber-300x169.jpg"
+                                        class="lateral-card__image amp-wp-enforced-sizes i-amphtml-layout-intrinsic i-amphtml-layout-size-defined i-amphtml-element i-amphtml-layout"
+                                        width="300" height="169" layout="intrinsic" i-amphtml-layout="intrinsic"
+                                        i-amphtml-auto-lightbox-visited="">
+                                        <i-amphtml-sizer class="i-amphtml-sizer"><img alt="" aria-hidden="true"
+                                                class="i-amphtml-intrinsic-sizer" role="presentation"
+                                                src="data:image/svg+xml;charset=utf-8,<svg height=&quot;169&quot; width=&quot;300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;/>">
+                                        </i-amphtml-sizer><noscript><img
+                                                src="https://www.candy.cl/wp-content/uploads/2020/01/Justin-Bieber-300x169.jpg"
+                                                class="lateral-card__image" width="300" height="169"></noscript><img
+                                            decoding="async"
+                                            src="https://www.candy.cl/wp-content/uploads/2020/01/Justin-Bieber-300x169.jpg"
+                                            class="i-amphtml-fill-content i-amphtml-replaced-content">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <figcaption class="lateral-card__right">
+                                <time class="lateral-card__date">04-enero-2020</time>
+                                <h2 class="lateral-card__title">
+                                    <a href="http://www.candy.cl/?p=240">[AUDIO] Escucha lo nuevo de Justin
+                                        Bieber</a>
+                                </h2>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
                 <p>El caso más evidente es el del trap: ausente en las cuatro versiones previas de los premios que
                     organiza la Sociedad Chilena de Autores e Intérpretes Musicales (SCD), los artistas adscritos a
                     esa movida tendrán un lugar destacado en el evento de esta noche en el Teatro Teletón, que será
@@ -711,44 +894,6 @@
                     revelación), Gianluca y Ceaese (ambos compitiendo en Mejor artista música urbana), Tomasa del Real,
                     Pablo Chill-E, Polimá Westcoast y Young Cister. Actuarán por separado y al final todos juntos.</p>
             </div>
-        </section>
-        <section class="ver-tambien">
-            <header class="header--section header--secction--ver--tambien">
-                Ver tambien
-            </header>
-            <div class="card-leer card--flex">
-                <a class="card-leer--overlay" href="#">
-                </a>
-                <div class="card--image">
-                    <amp-img src="http://placehold.it/50x50/" alt="" width="140" height="114" class="img--card">
-                    </amp-img>
-                </div>
-                <div class="card--content">
-                    <div class="card--content-item card--date">
-                        12.05.2020
-                    </div>
-                    <div class="card--content-item card--title">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum quam necessi
-                    </div>
-                </div>
-            </div>
-            <p>A ellos se suma Paloma Mami, la gran revelación del pop local, quien pese a no cumplir con las bases
-                para postular como Artista revelación -que exigen haber publicado disco de al menos cuatro temas-
-                está en carrera en uno de los apartados más importantes: Canción del año, por su éxito “Not steady”.
-                Un reconocimiento a la artista chilena más escuchada en el streaming este 2019 (con cerca de 400
-                millones de reproducciones digitales a la fecha, sumando todas las plataformas), quien por estar
-                fuera de Chile no podrá asistir a la ceremonia. Ante la posibilidad cierta de que se quede con su
-                primer Pulsar, está contemplado que envíe un video de agradecimiento.</p>
-
-            <p>Lo mismo Mon Laferte, por estos días en Europa con la gira de Norma. Es con ese LP que la cantautora
-                postula al premio mayor: Álbum del año, galardón que aún no tiene en su vitrina (en 2018 se quedó con
-                Canción del año, Mejor artista pop y Canción más escuchada) y para el que este año parece llegar
-                mejor posicionada. Sus competidores en ese ítem son Gepe, Álex Anwandter, La Brígida Orquesta y Cami.
-            </p>
-
-            <p>Ésta última y Francisca Valenzuela también serán parte del show. En una nueva muestra de que el pop
-                actual es dominado por propuestas femeninas, su presencia no será en un bloque dedicado “a las mujeres
-                en la música”, como en años anteriores, sino que con un espacio estelar sobre el escenario.</p>
         </section>
 
         <section class="tambien-leer">
